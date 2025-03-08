@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Project-Manager-App</RootNamespace>
     <AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
+    <UserSecretsId>5bf83267-01ec-48e0-9cab-b515a3c2916a</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

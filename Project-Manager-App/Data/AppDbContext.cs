@@ -14,7 +14,8 @@ namespace Project_Manager_App.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(Configuration.GetConnectionString("WebApiDatabse"));
+            // Connect to postgres with connection string from app settings
+            optionsBuilder.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
 
         public DbSet<Project> Projects { get; set; }

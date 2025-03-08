@@ -1,10 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using Project_Manager_App.Components;
+using Project_Manager_App.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connection = builder.Configuration["ConnectionStrings:DefaultConnection"];
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Configure DbContext with PostgreSQL connection
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
