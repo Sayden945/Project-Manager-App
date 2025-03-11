@@ -19,6 +19,11 @@
     height: 2.5rem;
 }
 
+.side-bar-bottom {
+    bottom: 0;
+    height: 5rem;
+}
+
 
 .navbar-brand {
     font-size: 1.1rem;
@@ -121,7 +126,7 @@
         /* Never collapse the sidebar for wide screens */
         display: block;
         /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
+        height: calc(100vh - 8.5rem);
         overflow-y: auto;
     }
 }
