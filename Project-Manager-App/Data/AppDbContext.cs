@@ -18,6 +18,7 @@ namespace Project_Manager_App.Data
             optionsBuilder.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<TaskItem> Tasks { get; set; }
     }

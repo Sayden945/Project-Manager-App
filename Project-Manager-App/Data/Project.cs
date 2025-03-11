@@ -2,8 +2,14 @@
 {
     public class Project
     {
-        public int Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public string Name { get; set; }
+        private int Id { get; set; }
+        private DateTime CreatedAt { get; set; }
+        private string Name { get; set; }
+
+        public Project()
+        {
+            CreatedAt = DateTime.Now;
+            Name = "Guest";
+        }
     }
 }
